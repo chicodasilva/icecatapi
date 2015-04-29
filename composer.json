@@ -1,21 +1,11 @@
 {
-    "name": "asgoodasnu/icecatapi",
+    "name": "chicodasilva/icecatapi",
     "type": "symfony-bundle",
     "description": "Icecat Api for Symfony2",
     "keywords":     ["icecat"],
-    "homepage": "https://github.com/asgoodasnu/icecatapi",
+    "homepage": "https://github.com/chicodasilva/icecatapi",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Simon Chrzanowski",
-            "email": "simon@wirkaufens.de",
-            "homepage": "http://wirkaufens.de"
-        },
-        {
-            "name": "Github Community",
-            "homepage": "https://github.com/asgoodasnu/icecatapi/contributors"
-        }
-    ],
+    
     "require": {
         "monolog/monolog": "1.10.0",
         "asgoodasnu/guzzlecommandclient": "0.14"
