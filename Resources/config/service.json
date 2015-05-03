@@ -17,7 +17,33 @@
                 },
                 "lang": {
                     "location": "query",
-                    "default": "de"
+                    "default": "pt"
+                },
+                "output": {
+                    "location": "query",
+                    "default": "productxml"
+                }
+            }
+        },
+        "FindProductByVendorProdID": {
+            "httpMethod": "GET",
+            "uri": "",
+            "summary": "Get the product info from Icecat by using the Vendor and Product ID",
+            "responseClass": "IcecatResponse",
+            "parameters": {
+                "prod_id": {
+                    "required": "true",
+                    "location": "query",
+                    "sentAs": "prod_id"
+                },
+                "vendor": {
+                    "required": "true",
+                    "location": "query",
+                    "sentAs": "vendor"
+                },
+                "lang": {
+                    "location": "query",
+                    "default": "pt"
                 },
                 "output": {
                     "location": "query",
@@ -31,7 +57,7 @@
             "type": "object",
             "properties": {
                 "Result": {
-                    "location": "json",
+                    "location": "xml",
                     "type": "object"
                 }
             }

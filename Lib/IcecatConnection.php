@@ -97,6 +97,34 @@ class IcecatConnection extends GuzzleCommandClient
     }
 
     /**
+     * Method that finds the product description on icecat based on vender and Product ID
+     * @param string $vendor
+     * @param string $prodid
+     *
+     * @return string
+     */
+    public function findProductInfoByVendorProdID ($vendor, $prodid)
+    {
+        $params = array(
+            "prod_id" => $prodid,
+            "vendor" => $vendor,
+            "lang" => $this->language,
+        );
+
+        $this->setBaseUrl($this->buildUrlWithHttpAuth());
+
+        $result = $this->executeCommand('FindProductByVendorProdID', $params);
+
+        if ("success" == $result['status']) {
+            $xml = $result['message']->xml();
+
+            return json_encode($xml);
+        }
+
+        return json_encode(array("error" => $result['message']));
+    }
+
+    /**
      * Method for building the URL with the authentication.
      * Tried it with setDefaultOption but I didn't get it working
      *
